@@ -24,7 +24,7 @@
   <main>
     <h1 id="title">Buscador</h1>
 
-    <form for="" onsubmit="/*function*/" >
+    <form for="" onsubmit="/*function*/">
       <div class="filter">
         <div class="container-input">
           <label for="name" class="label-block">Nombre</label>
@@ -38,9 +38,9 @@
             <option value="1">Calzado</option>
             <option value="2">Marroquinería</option>
           </select>
-        </div>  
+        </div>
 
-        <div class="container-input">  
+        <div class="container-input">
           <label for="brand" class="label-block">Marca</label>
           <select name="brand" id="brand">
             <option value="0">Adidas</option>
@@ -48,25 +48,51 @@
             <option value="2">Ami</option>
             <option value="3">Alexander McQueen</option>
           </select>
-        </div>  
-        
-          <div class="container-input">    
-            <label for="type-element" class="label-block">Tipo de elemento</label>
-            <select name="article-product" id="article-product">
-              <option value="0">Artículo</option>
-              <option value="1">Producto</option>
-            </select>
-          </div>
+        </div>
 
-          <div class="container-input" id="container-show">
-            <label for="show">En uso por la aplicación</label>
-            <input type="checkbox" id="show" name="show">
-          </div>
+        <div class="container-input">
+          <label for="type-element" class="label-block">Tipo de elemento</label>
+          <select name="article-product" id="article-product">
+            <option value="0">Artículo</option>
+            <option value="1">Producto</option>
+          </select>
+        </div>
+
+        <div class="container-input" id="container-show">
+          <label for="show">En uso por la aplicación</label>
+          <input type="checkbox" id="show" name="show">
+        </div>
       </div>
-      
+
       <button type="submit" id="submit">Filtrar</button>
-      </form>
     </form>
+    </form>
+
+    <div class="result">
+      <div class="table-responsive">
+        <table class="table table-primary">
+          <thead>
+            <tr>
+              <th scope="col">Column 1</th>
+              <th scope="col">Column 2</th>
+              <th scope="col">Column 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td scope="row">R1C1</td>
+              <td>R1C2</td>
+              <td>R1C3</td>
+            </tr>
+            <tr class="">
+              <td scope="row">Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </main>
 
   <footer>

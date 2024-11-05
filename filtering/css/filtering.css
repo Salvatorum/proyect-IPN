@@ -13,6 +13,11 @@
     font-style: normal;
 }
 
+body {
+    width: 100vh;
+    width: 100vw;
+}
+
 main {
      flex: 1; 
 }
@@ -84,6 +89,14 @@ input, select {
     transform: scale(1.1);
 }
 
+
+/* estilos de la tabla de resultados*/
+
+.result {
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+}
 
 
 /* código responsivo */
