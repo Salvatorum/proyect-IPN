@@ -20,10 +20,6 @@ document.querySelector("footer").innerHTML = `
         <p>&copy; 2024 Todos los derechos reservados.</p>
 `
 
-
-
-
-
 /* funcinalidad del menú hamburguesa */
 const menu = document.querySelector("#menuNav");
 const openMenu = document.querySelector("#openM");
@@ -36,4 +32,13 @@ openMenu.addEventListener("click" , () => {
 exitMenu.addEventListener("click" , () => {
     menu.classList.remove("visible");
 }) 
+
+
+
+/* JQuery para el menu */
+$(document).ready(function() {
+ 
+
+    
+});
 
