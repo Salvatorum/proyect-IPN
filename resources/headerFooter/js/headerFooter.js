@@ -36,9 +36,9 @@ exitMenu.addEventListener("click" , () => {
 
 
 /* JQuery para el menu */
-$(document).ready(function() {
+// $(document).ready(function() {
  
 
     
-});
+// });
 

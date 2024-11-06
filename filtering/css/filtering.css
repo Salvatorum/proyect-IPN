@@ -14,8 +14,9 @@
 }
 
 body {
-    width: 100vh;
-    width: 100vw;
+    height:100vh;
+    width:100vw;
+    overflow-x: hidden;
 }
 
 main {
@@ -31,14 +32,16 @@ main {
 }
 
 form {
-    width: 100%;
+    width: 95%;
     height: auto;
+    margin: 0 auto;
     padding-bottom: 0.1rem;
     background-color: aliceblue;
     padding-left: 1.5rem;
 }
 
 .filter {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items:start;
@@ -93,11 +96,26 @@ input, select {
 /* estilos de la tabla de resultados*/
 
 .result {
-    width: 100%;
+    width: 95%;
     height: auto;
-    background-color: aquamarine;
+    margin: 1.2rem auto 0 auto;
 }
 
+td {
+    cursor: pointer;
+}
+
+/* th {
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+td {
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+} */
 
 /* código responsivo */
 

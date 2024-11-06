@@ -1,3 +1,99 @@
+:root {
+    --color-title:rgb(61, 78, 110);
+    --color-backgound-buttom: #45709B;
+    --color-buttom:#fff;
+    --color-border-input: rgb(199, 199, 199);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+body {
+    height:100vh;
+    width:100vw;
+}
+
 main {
     flex: 1;
+    margin-bottom: 1rem;
+    width:100%;
+    height: auto;
+    min-height: 100vh; 
+    padding-bottom: 100px; 
+}
+
+#title {
+    width: auto;
+    margin: 0.5rem 0 0 1rem;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--color-title) ;
+}
+
+.container-product {
+    margin: 1.5rem auto 0 auto; 
+    max-width: 600px;
+    height: 500px;
+}
+.container-img {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.carousel-img {
+    width: 100px;
+    height: 300px;
+    overflow: auto;
+    box-shadow: 5px 5px 30px rgb(207, 207, 207);
+    border-radius: 5px ;
+}
+
+.carousel-img::-webkit-scrollbar { 
+    display: none; }
+
+.carousel-item {
+    width: 100%;
+    height: 95px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-img {
+    margin: 0 auto;
+    width: 340px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 30px rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+.data-buttom {
+    margin: 5px auto 0 auto;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 30px rgb(207, 207, 207);   
+}
+
+.data-buttom p {
+    margin-bottom: 5px;
+}
+
+.weight {
+ font-weight:bold;
+}
+
+img {
+    max-width: 100%; 
+    max-height: 100%; 
 }
