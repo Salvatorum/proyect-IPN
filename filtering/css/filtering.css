@@ -14,7 +14,7 @@
 }
 
 body {
-    height:100vh;
+    min-height: 100vh;
     width:100vw;
     overflow-x: hidden;
 }
@@ -73,6 +73,12 @@ input, select {
     cursor: pointer;
 
 }
+.buttoms {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 #submit {
     display: block;
@@ -89,6 +95,23 @@ input, select {
 }
 
 #submit:hover {
+    transform: scale(1.1);
+}
+
+#buttom-nuevo {
+    display: inline;
+    padding: 0.4rem;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--color-buttom);
+    background-color: var(--color-backgound-buttom);
+    transition: transform 0.3s ease;
+}
+
+#buttom-nuevo:hover  {
     transform: scale(1.1);
 }
 

@@ -4,7 +4,6 @@
     padding: 0;
 }
 body {
-    width: 100vh;
     width: 100vw;
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -14,7 +13,6 @@ body {
 }
 
 header {
-    width: 100vw;
     display: flex;
     align-items: center;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.097);
@@ -101,7 +99,7 @@ main {
 /* Footer*/
 
 footer {
-    padding: 1rem 0 1rem 1rem;
+   padding: 1rem 0 1rem 1rem;
    box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.097);
 }
 
