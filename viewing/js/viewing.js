@@ -5,3 +5,21 @@ $(document).ready(function() {
       $('#selected-image').attr('src', selectedImageSrc);
     });
   });
+
+/* seleccion de botones de colores*/  
+
+$(document).ready(function() {
+
+$('button').click(function(){
+  $('.button').removeClass('activate');
+  $(this).addClass('activate');
+});
+
+
+$('.button-waist').click(function(){
+  $('.button-waist').removeClass('activa');
+  $(this).addClass('activa');
+});
+
+});
+
