@@ -1,8 +1,8 @@
 /* Permite hacer click a las imagenes del carousel y precentarlas como principales */
 $(document).ready(function() {
-    $('.carousel-item img').click(function() {
+    $('.carouselItem img').click(function() {
       var selectedImageSrc = $(this).attr('src');
-      $('#selected-image').attr('src', selectedImageSrc);
+      $('#selectedImage').attr('src', selectedImageSrc);
     });
   });
 
@@ -16,8 +16,8 @@ $('button').click(function(){
 });
 
 
-$('.button-waist').click(function(){
-  $('.button-waist').removeClass('activa');
+$('.buttonWaist').click(function(){
+  $('.buttonWaist').removeClass('activa');
   $(this).addClass('activa');
 });
 
