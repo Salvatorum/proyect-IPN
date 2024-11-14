@@ -1,3 +1,15 @@
+/* funcionalidad del botón hamburguesa */
+$(document).ready(function() {
+    $("#openM").click(function() {
+      $("#menuNav").addClass("visible");
+    });
+  
+    $("#exitM").click(function() {
+      $("#menuNav").removeClass("visible");
+    });
+  });
+
+
 // const id = document.getElementById('id');
 const form = document.getElementById('form');
 const isku = document.getElementById('isku');
