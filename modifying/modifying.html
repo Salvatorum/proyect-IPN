@@ -20,100 +20,305 @@
 <body>
     <header>
         <div class="logo">
-          <img src="../../resources/img/logo_iPN.svg" alt="logo">
-      </div>
-      <button class="openMenu bi bi-list" id="openM"></button>
-      <nav class="menu" id="menuNav">   
-          <ul class="menu-list">
-              <button class="exitMenu bi bi-x-lg" id="exitM"></button>
-              <li class="itemMenu login-text"><a href="#">Tomás</a></li>
-          </ul> 
-      </nav>
-      <div class="login">
-          <i class="bi bi-person-circle"></i>
-      </div>
+            <img src="../../resources/img/logo_iPN.svg" alt="logo">
+        </div>
+        <button class="openMenu bi bi-list" id="openM"></button>
+        <nav class="menu" id="menuNav">
+            <ul class="menu-list">
+                <button class="exitMenu bi bi-x-lg" id="exitM"></button>
+                <li class="itemMenu login-text"><a href="#">Tomás</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <i class="bi bi-person-circle"></i>
+        </div>
     </header>
     <main>
         <h1 id="title">Nuevo</h1>
         <div class="container">
-            <form id="form">
+            <form id="form-check-input">
+                <div class="row">
+                    <div class="card mb-4 col-6">
+                        <div class="card-header">
+                            <h5>Información básica</h5>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="container-input">
+                                <label for="isku">SKU</label>
+                                <input type="text" id="isku">
+                            </div>
+
+                            <div class="container-input">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name">
+                            </div>
+
+                            <div class="container-input">
+                                <label for="price">Precio</label>
+                                <input type="number" id="price">
+                            </div>
+
+                            <div class="container-input">
+                                <label for="category-text">Categoría</label>
+                                <div class="flex-group">
+                                    <!-- <input type="text" id="category-text">
+                                    <label for="category-option"></label> -->
+                                    <select name="category-option" id="category-option">
+                                        <option value="0">Indumentaria</option>
+                                        <option value="1">Calzado</option>
+                                        <option value="2">Marroquinería</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="container-input">
+                                <label for="brand">Marca</label>
+                                <div class="flex-group">
+                                    <!-- <input type="text" id="brand">
+                                    <label for="brand-option"></label> -->
+                                    <select name="brand" id="brand-option">
+                                        <option value="0">Adidas</option>
+                                        <option value="1">Balenciaga</option>
+                                        <option value="2">Ami</option>
+                                        <option value="3">Alexander McQueen</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="container-input">
+                                <label for="type-product">Tipo de producto</label>
+                                <select name="type-product" id="type-product">
+                                    <option value="0">Artículo</option>
+                                    <option value="1">Producto</option>
+                                </select>
+                            </div>
+
+                            <div class="container-input">
+                                <label for="in-use" id="label-radio">En uso</label>
+                                <input class="form-check-input input-only" type="checkbox" id="in-use">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 col-6">
+
+                        <div class="card-header">
+                            <h5>Stock y Ubicación</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="container-input">
+                                <label for="branch">Sucursal</label>
+                                <select name="branch" id="branch">
+                                    <option value="0">Moda Urbana Style</option>
+                                    <option value="1">Sucursal Centro</option>
+                                    <option value="1">Sucursal Norte</option>
+
+                                </select>
+                            </div>
+
+                            <div class="container-input">
+                                <label for="stock">Stock</label>
+                                <input type="number" id="stock">
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Estado</label>
+                                <select class="form-select" required>
+                                    <option value="en-stock">En Stock</option>
+                                    <option value="agotado">Agotado</option>
+                                    <option value="bajo-stock">Bajo Stock</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="card mb-4 col-6">
+                        <div class="card-header">
+                            <h5>Dimensiones del Producto</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="container-input">
+                                <label class="form-label">Largo (cm)</label>
+                                <input type="number" class="form-control" value="30" required>
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Ancho (cm)</label>
+                                <input type="number" class="form-control" value="20" required>
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Alto (cm)</label>
+                                <input type="number" class="form-control" value="12" required>
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Peso (kg)</label>
+                                <input type="number" step="0.1" class="form-control" value="0.8" required>
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Volumen (cm³)</label>
+                                <input type="number" class="form-control" value="7200" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 col-6">
+                        <div class="card-header">
+                            <h5 class="mb-0">Dimensiones del Embalaje</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="container-input">
+                                <label class="form-label">Largo (cm)</label>
+                                <input type="number" class="form-control" value="32" required>
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Ancho (cm)</label>
+                                <input type="number" class="form-control" value="22" required>
+                            </div>
+
+                            <div class="container-input">
+                                <label class="form-label">Alto (cm)</label>
+                                <input type="number" class="form-control" value="14" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container1">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Tallas y Colores Disponibles</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Talla EU</th>
+                                        <th>
+                                                <select name="color1" id="color1">
+                                                    <option value="0">Negro</option>
+                                                    <option value="2">Blanco</option>
+                                                    <option value="3">verde</option>
+
+                                                </select>
+                                        </th>
+                                        <th>
+                                            <select name="color1" id="color1">
+                                                <option value="0">Negro</option>
+                                                <option value="2">Blanco</option>
+                                                <option value="3">verde</option>
+                                            </select>
+                                        </th>
+                                        <th>
+                                            <select name="color1" id="color1">
+                                                <option value="0">Negro</option>
+                                                <option value="2">Blanco</option>
+                                                <option value="3">verde</option>
+                                            </select>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>42</td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>43</td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>44</td>
+                                        <td><input type="number" class="form-control" value="12"></td>
+                                        <td><input type="number" class="form-control" value="11"></td>
+                                        <td><input type="number" class="form-control" value="12"></td>
+                                    </tr>
+                        
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Imágenes del Producto</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Imagen Principal</label>
+                                    <input type="file" class="form-control" accept="image/*">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Imágenes Adicionales</label>
+                                    <input type="file" class="form-control" accept="image/*" multiple>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="container3">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Información Adicional</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Descripción del Producto</label>
+                                    <textarea class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="containerButtons">
+                    <a class="button" id="cancel" href="../filtering/filtering.html">Canselar</a>
+                    <button id="submit" type="submit">Crear</button>
+
+
+                </div>
+
                 <!-- <div class="container-input">
                     <label for="id">ID</label>
                     <input  type="number" id="id">
                     
                 </div> -->
 
-                <div class="container-input">
-                    <label for="isku">SKU</label>
-                    <input  type="text" id="isku">
-                </div>
 
-                <div class="container-input">
-                    <label for="name">Nombre</label>
-                    <input  type="text" id="name">
-                </div>
-
-                <div class="container-input">
-                    <label for="price">Precio</label>
-                    <input  type="number" id="price">
-                </div>
-
-                <div class="container-input">
-                    <label for="category-text">Categoría</label>
-                    <div class="flex-group">
-                        <input type="text" id="category-text">
-                        <label for="category-option"></label>
-                        <select name="category-option" id="category-option">
-                            <option value="0">Indumentaria</option>
-                            <option value="1">Calzado</option>
-                            <option value="2">Marroquinería</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="container-input">
-                    <label for="brand">Marca</label>
-                    <div class="flex-group">
-                        <input type="text" id="brand">
-                        <label for="brand-option"></label>
-                        <select name="brand" id="brand-option">
-                            <option value="0">Adidas</option>
-                            <option value="1">Balenciaga</option>
-                            <option value="2">Ami</option>
-                            <option value="3">Alexander McQueen</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="container-input">
-                    <label for="type-product">Tipo de producto</label>
-                    <select  name="type-product" id="type-product">
-                        <option value="0">Artículo</option>
-                        <option value="1">Producto</option>
-                    </select>
-                </div>
-
-                <div class="container-input">
-                    <label for="in-use" id="label-radio">En uso</label>
-                    <input class="form-check-input input-only" type="checkbox" id="in-use">
-                </div>
-
-                <div class="container-input">
-                    <label for="stock">Stock</label>
-                    <input  type="number" id="stock">
-                </div>
-                <button id="submit" type="submit">Crear</button>
             </form>
         </div>
 
     </main>
     <footer>
-    <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../resources/js/modifying.js"></script>
 </body>
 

@@ -4,6 +4,7 @@
     --color-buttom:#fff;
     --color-border-input: rgb(199, 199, 199);
     --color-shadow-box:rgb(207, 207, 207);
+    --color-button-cancel:rgb(186, 86, 85);
 }
 
 
@@ -121,13 +122,14 @@ main {
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    justify-content:space-around;
+    /* align-items:center; */
+    flex-wrap: wrap;
     padding: 1rem 0 1rem 1rem;
     margin:  2rem auto 2rem auto;
-    box-shadow: 5px 5px 30px var(--color-shadow-box); 
+    /* box-shadow: 5px 5px 30px var(--color-shadow-box);  */
     border-radius: 5px;
-    width: 700px;
+    width: auto;;
 }
 
 .container-input{
@@ -149,11 +151,11 @@ label {
     font-weight: 500;
 }
 input[type="text"], input[type="number"] {
-    width: 400px;
+    max-width: 400px;
 }
 
 select {
-    width: 140px;
+    width: 200px;
     display: block;
 }
 
@@ -172,8 +174,7 @@ input[type="text"], input[type="number"], select {
     display: inline;
 }
 
-#submit {
-    display: block;
+#submit, #cancel {
     margin: 0.5rem 0 0.5rem 0;
     padding: 0.4rem;
     background-color: var(--color-backgound-buttom);
@@ -185,10 +186,23 @@ input[type="text"], input[type="number"], select {
     letter-spacing: 1px;
     transition: transform 0.3s ease;
 }
+#cancel {
+    width: 100px;
+    text-decoration: none;
+    background-color: var(--color-button-cancel);
+}
 
 #submit:hover {
     transform: scale(1.1);
 }
+
+#cancel:hover {
+    transform: scale(1.1);
+}
+
+
+
+
 
 footer {
     padding: 1rem 0 1rem 1rem;

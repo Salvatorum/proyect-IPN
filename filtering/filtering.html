@@ -25,6 +25,7 @@
   <nav class="menu" id="menuNav">   
       <ul class="menu-list">
           <button class="exitMenu bi bi-x-lg" id="exitM"></button>
+          <li class="itemMenu"><a href="../modifying/modifying.html">Nuevo</a></li>
           <li class="itemMenu login-text"><a href="#">Tomás</a></li>
       </ul> 
   </nav>
@@ -75,9 +76,20 @@
           <input type="checkbox" id="show" name="show">
         </div>
       </div>
+
+      <div class="container-input" id="inputMaxMin">
+        <div class="input-group">
+            <label for="min-price" class="labelMaxMin">Precio mínimo:</label>
+            <input type="number" id="min-price" min="0" value="0">
+        </div>
+        <div class="input-group">
+            <label for="max-price" class="labelMaxMin">Precio máximo:</label>
+            <input type="number" id="max-price" min="0" value="1000">
+        </div>
+      </div>
+
       <div class="buttoms">
         <button type="submit" id="submit">Filtrar</button>
-        <a id="buttom-nuevo" href="../modifying/modifying.html">Nuevo</a>
       </div>
     </form>
     

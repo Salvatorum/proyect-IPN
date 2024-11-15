@@ -141,6 +141,21 @@ form {
 .container-input {
     margin: 0.5rem 0.5rem 0 0;
 }
+#inputMaxMin {
+    max-width:720px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 1rem;
+}
+
+.input-group {
+    width: 350px;
+}
+
+.labelMaxMin {
+    margin-right: 5px ;
+}
 
 
 input, select {
