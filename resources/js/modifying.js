@@ -10,31 +10,27 @@ $(document).ready(function() {
   });
 
 
-// const id = document.getElementById('id');
-const form = document.getElementById('form');
-const isku = document.getElementById('isku');
-const nam = document.getElementById('name').value;
-const price = document.getElementById('price');
-const category = document.getElementById('category-option');
-const categoryText = document.getElementById('category-text');
-const brand = document.getElementById('brand');
-const typProduct = document.getElementById('type-product');
-const inUse = document.getElementById('in-use');
-const stock = document.getElementById('stock');
+/* Código de validación del Form de Bootstrap 5 */
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
 
-form.addEventListener('submit', (event)=>{
-    event.preventDefault();
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
 
-    /* Validación del nombre*/
-    if (nam.trim() === "") {
-        alert("Por favor; ingrese un nombre valido");
-        return;
-    }
-    
-    alert("Formulario enviado correctamente!");
-    form.submit(); // Envía el formulario
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
 
-})
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 
 
 
