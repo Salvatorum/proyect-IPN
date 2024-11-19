@@ -18,19 +18,5 @@ $(document).ready(function() {
   });
 
   
-/* seleccion de botones de colores*/  
-$(document).ready(function() {
 
-$('button').click(function(){
-  $('.button').removeClass('activate');
-  $(this).addClass('activate');
-});
-
-
-$('.buttonWaist').click(function(){
-  $('.buttonWaist').removeClass('activa');
-  $(this).addClass('activa');
-});
-
-});
 
