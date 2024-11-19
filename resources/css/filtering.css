@@ -1,8 +1,9 @@
 :root {
     --color-title:rgb(61, 78, 110);
     --color-backgound-buttom: #45709B;
-    --color-buttom:#fff;
+    --color-letter-button:#fff;
     --color-border-input: rgb(199, 199, 199);
+    --color-filter: aliceblue; 
 }
 
 
@@ -123,19 +124,26 @@ form {
     height: auto;
     margin: 0 auto;
     padding-bottom: 0.1rem;
-    background-color: aliceblue;
     padding: 0 0.5rem 0 0.5rem;
     border-radius: 5px;
 }
 
 .filter {
     width: 100%;
+    padding: 0 0 0.5rem 0.5rem;
     display: flex;
     flex-wrap: wrap;
-    align-items:start;
-    justify-content: space-around;
+    align-items:center;
+    justify-content: flex-start;
     text-align: left;
+    background-color: var(--color-filter);
 }
+
+.filter > *:last-child { 
+    align-self: flex-start; 
+}
+
+
 .container-separato {
     display: inline;
 }
@@ -143,22 +151,6 @@ form {
 .container-input {
     margin: 0.5rem 0.5rem 0 0;
 }
-#inputMaxMin {
-    max-width:720px ;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    gap: 1rem;
-}
-
-.input-group {
-    width: 350px;
-}
-
-.labelMaxMin {
-    margin-right: 5px ;
-}
-
 
 input, select {
     border: 1px solid var(--color-border-input); 
@@ -183,7 +175,7 @@ input, select {
     align-items: center;
 }
 
-#containerButtons {
+#containerButtons, #NewDownload  {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -196,7 +188,7 @@ input, select {
     background-color: var(--color-backgound-buttom);
     border: none;
     border-radius: 10%;
-    color: var(--color-buttom);
+    color: var(--color-letter-button);
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -216,7 +208,7 @@ input, select {
     font-weight: 400;
     letter-spacing: 1px;
     text-decoration: none;
-    color: var(--color-buttom);
+    color: var(--color-letter-button);
     background-color: var(--color-backgound-buttom);
     transition: transform 0.3s ease;
 }
@@ -225,13 +217,18 @@ input, select {
     transform: scale(1.1);
 }
 
-.buttonDownload {
+#buttonDownload {
     display: inline;
     margin: 0 1rem 0 1rem;
 }
 
 #download {
     background-color: rgb(44, 145, 103);
+}
+
+#new a {
+    text-decoration: none;
+    color: var(--color-letter-button);
 }
 
 
@@ -247,16 +244,56 @@ input, select {
     margin-top: 1rem;
 }
 
-td {
+.tdLink {
     cursor: pointer;
 }
 
+.tdLink:hover {
+    box-shadow: inset -10px -10px 50px rgb(149, 180, 235);
+    background-color: var(--color-filter) ;  
+}
+
+#pagination {
+  margin-top: 10px; 
+  text-align: center; 
+  margin-bottom: 1rem;
+
+}
+
+.linkPage {
+    display: inline-block; 
+    padding: 5px 10px;
+    margin: 0 5px; 
+    border: 1px solid #ccc;
+    text-decoration: none; 
+    color: #333;
+    border-radius: 5px;  
+    transition: background-color 0.3s ease; 
+  }
+  
+  .linkPage:hover {
+    background-color: #eee;
+  }
+  
+  .linkPage.active {
+    background-color: #337ab7; 
+    color: white;
+    border-color: #337ab7;
+  }
+  
+
 footer {
     padding: 1rem 0 1rem 1rem;
-    box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.097);
+    box-shadow: -10px -10px 30px rgba(70, 70, 70, 0.097);
  }
 
  /* Estilos responsivos del navbar */
+
+ @media screen and (max-width: 1091px) {
+    .filter {
+        justify-content: space-around;
+    }
+}
 
 @media screen and (max-width: 650px) {
     .itemMenu a {

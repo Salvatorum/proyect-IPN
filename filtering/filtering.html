@@ -25,7 +25,6 @@
   <nav class="menu" id="menuNav">   
       <ul class="menu-list">
           <button class="exitMenu bi bi-x-lg" id="exitM"></button>
-          <li class="itemMenu"><a href="../modifying/modifying.html">Nuevo</a></li>
           <li class="itemMenu login-text"><a href="#">Tomás</a></li>
       </ul> 
   </nav>
@@ -37,7 +36,7 @@
   <main>
     <h1 id="title">Buscador</h1>
 
-    <form for="" onsubmit="/*function*/">
+    <form for="">
       <div class="filter">
         <div class="container-input">
           <label for="name" class="label-block">Nombre</label>
@@ -47,19 +46,21 @@
         <div class="container-input">
           <label for="categories" class="label-block">Categorías</label>
           <select name="categories" id="categories">
-            <option value="0">Indumentaria</option>
-            <option value="1">Calzado</option>
-            <option value="2">Marroquinería</option>
+            <option value="0">Todas</option>
+            <option value="1">Indumentaria</option>
+            <option value="2">Calzado</option>
+            <option value="3">Marroquinería</option>
           </select>
         </div>
 
         <div class="container-input">
           <label for="brand" class="label-block">Marca</label>
           <select name="brand" id="brand">
-            <option value="0">Adidas</option>
-            <option value="1">Balenciaga</option>
-            <option value="2">Ami</option>
-            <option value="3">Alexander McQueen</option>
+            <option value="0">Todas</option>
+            <option value="1">Adidas</option>
+            <option value="2">Balenciaga</option>
+            <option value="3">Ami</option>
+            <option value="4">Alexander McQueen</option>
           </select>
         </div>
 
@@ -75,34 +76,35 @@
           <label for="show">En uso por la aplicación</label>
           <input type="checkbox" id="show" name="show">
         </div>
+
+        <div class="container-input">
+          <label for="company">Sucursal</label>
+          <select name="company" id="company">
+            <option value="0">Todas</option>
+            <option value="1">Moda Urbana Style</option>
+            <option value="2">Elite Sport Center</option>
+            <option value="3">Athletic Zone</option>
+          </select>
+        </div>
       </div>
 
-      <div class="container-input" id="inputMaxMin">
-        <div class="input-group">
-            <label for="min-price" class="labelMaxMin">Precio mínimo:</label>
-            <input type="number" id="min-price" min="0" value="0">
-        </div>
-        <div class="input-group">
-            <label for="max-price" class="labelMaxMin">Precio máximo:</label>
-            <input type="number" id="max-price" min="0" value="1000">
-        </div>
-      </div>
-
+      
       <div id="containerButtons">
         <div class="buttons">
           <button type="submit" id="submit">Filtrar</button>
         </div>
-        <div class="buttonDownload">
-          <button class="button" id="download"><i class="bi bi-file-earmark-arrow-down"></i></button>
+        <div id="NewDownload">
+          <div id="buttonNew">
+            <button class="button" id="new"><a href="../modifying/modifying.html">Nuevo</a></button>
+          </div>
+          <div id="buttonDownload">
+            <button class="button" id="download"><i class="bi bi-file-earmark-arrow-down"></i></button>
+          </div>
         </div>
       </div>
-      
     </form>
     
     <div class="result">
-      <!-- <div class="buttonDownload">
-        <button class="button" id="download">Descargar resultado</button>
-      </div> -->
       <div class="table-responsive">
         <table class="table table-striped table-hover table-bordered" id="table-result">
         
@@ -114,15 +116,16 @@
               <th scope="col">Precio</th>
               <th scope="col">Categoría</th>
               <th scope="col">Marca</th>
-              <th scope="col">Tipo producto</th>
+              <th scope="col">Tipo</th>
               <th scope="col">En uso</th>
               <th scope="col">Stock</th>
+              <th scope="col">Sucursal</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="">
+            <tr>
               <td scope="row">1</td>
-              <td scope="row">DEPOR-XYZ-BLN-41</td>
+              <td scope="row" class="tdLink">DEPOR-XYZ-BLN-41</td>
               <td scope="row">Zapatillas De Tenis Asics</td>
               <td scope="row">20.000</td>
               <td scope="row">Deportivo</td>
@@ -130,10 +133,11 @@
               <td scope="row">Producto</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">24</td>
+              <td scope="row">Sucursal Centro</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">2</td>
-              <td scope="row">ELEC-ABC-123-15</td>
+              <td scope="row" class="tdLink">ELEC-ABC-123-15</td>
               <td scope="row">Smartphone Galaxy S21</td>
               <td scope="row">799.999</td>
               <td scope="row">Electrónica</td>
@@ -141,10 +145,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">50</td>
+              <td scope="row">Sucursal Norte</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">3</td>
-              <td scope="row">HOGAR-DEF-456-22</td>
+              <td scope="row" class="tdLink">HOGAR-DEF-456-22</td>
               <td scope="row">Licuadora de 5 Velocidades</td>
               <td scope="row">59.990</td>
               <td scope="row">Hogar</td>
@@ -152,10 +157,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">30</td>
+              <td scope="row">Sucursal Sur</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">4</td>
-              <td scope="row">MODA-GHI-789-33</td>
+              <td scope="row" class="tdLink">MODA-GHI-789-33</td>
               <td scope="row">Vestido de Noche Elegante</td>
               <td scope="row">89.990</td>
               <td scope="row">Moda</td>
@@ -163,10 +169,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-x-lg"></i></td>
               <td scope="row">15</td>
+              <td scope="row">Sucursal Este</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">5</td>
-              <td scope="row">LIBRO-JKL-012-44</td>
+              <td scope="row" class="tdLink">LIBRO-JKL-012-44</td>
               <td scope="row">Cien Años de Soledad</td>
               <td scope="row">14.990</td>
               <td scope="row">Libros</td>
@@ -174,10 +181,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">100</td>
+              <td scope="row">Sucursal Centro</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">6</td>
-              <td scope="row">JARDI-MNO-345-55</td>
+              <td scope="row" class="tdLink">JARDI-MNO-345-55</td>
               <td scope="row">Cortadora de Césped Eléctrica</td>
               <td scope="row">129.990</td>
               <td scope="row">Jardín</td>
@@ -185,10 +193,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">10</td>
+              <td scope="row">Sucursal Sur</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">7</td>
-              <td scope="row">JUEGO-PQR-678-66</td>
+              <td scope="row" class="tdLink">JUEGO-PQR-678-66</td>
               <td scope="row">Consola PlayStation 5</td>
               <td scope="row">499.990</td>
               <td scope="row">Juegos</td>
@@ -196,10 +205,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-x-lg"></i></td>
               <td scope="row">5</td>
+              <td scope="row">Sucursal Norte</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">8</td>
-              <td scope="row">COCIN-STU-901-77</td>
+              <td scope="row" class="tdLink">COCIN-STU-901-77</td>
               <td scope="row">Batería de Cocina 10 Piezas</td>
               <td scope="row">79.990</td>
               <td scope="row">Cocina</td>
@@ -207,10 +217,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">20</td>
+              <td scope="row">Sucursal Este</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">9</td>
-              <td scope="row">BELLE-VWX-234-88</td>
+              <td scope="row" class="tdLink">BELLE-VWX-234-88</td>
               <td scope="row">Set de Maquillaje Profesional</td>
               <td scope="row">45.990</td>
               <td scope="row">Belleza</td>
@@ -218,10 +229,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">35</td>
+              <td scope="row">Sucursal Oeste</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">10</td>
-              <td scope="row">MASCO-YZA-567-99</td>
+              <td scope="row" class="tdLink">MASCO-YZA-567-99</td>
               <td scope="row">Cama para Perro Grande</td>
               <td scope="row">29.990</td>
               <td scope="row">Mascotas</td>
@@ -229,10 +241,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">18</td>
+              <td scope="row">Sucursal Centro</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">11</td>
-              <td scope="row">AUDIO-BCD-890-11</td>
+              <td scope="row" class="tdLink">AUDIO-BCD-890-11</td>
               <td scope="row">Auriculares Inalámbricos</td>
               <td scope="row">129.990</td>
               <td scope="row">Electrónica</td>
@@ -240,10 +253,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">40</td>
+              <td scope="row">Sucursal Norte</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">12</td>
-              <td scope="row">DEPOR-EFG-123-22</td>
+              <td scope="row" class="tdLink">DEPOR-EFG-123-22</td>
               <td scope="row">Bicicleta de Montaña</td>
               <td scope="row">299.990</td>
               <td scope="row">Deportivo</td>
@@ -251,10 +265,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">15</td>
+              <td scope="row">Sucursal Sur</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">13</td>
-              <td scope="row">HOGAR-HIJ-456-33</td>
+              <td scope="row" class="tdLink">HOGAR-HIJ-456-33</td>
               <td scope="row">Aspiradora Robot</td>
               <td scope="row">199.990</td>
               <td scope="row">Hogar</td>
@@ -262,10 +277,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-x-lg"></i></td>
               <td scope="row">8</td>
+              <td scope="row">Sucursal Este</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">14</td>
-              <td scope="row">MODA-KLM-789-44</td>
+              <td scope="row" class="tdLink">MODA-KLM-789-44</td>
               <td scope="row">Bolso de Cuero</td>
               <td scope="row">79.990</td>
               <td scope="row">Moda</td>
@@ -273,10 +289,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">25</td>
+              <td scope="row">Sucursal Oeste</td>
             </tr>
-            <tr class="">
+             <tr>
               <td scope="row">15</td>
-              <td scope="row">JARDI-NOP-012-55</td>
+              <td scope="row" class="tdLink">JARDI-NOP-012-55</td>
               <td scope="row">Set de Herramientas de Jardín</td>
               <td scope="row">39.990</td>
               <td scope="row">Jardín</td>
@@ -284,10 +301,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">30</td>
+              <td scope="row">Sucursal Centro</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">16</td>
-              <td scope="row">JUEGO-QRS-345-66</td>
+              <td scope="row" class="tdLink">JUEGO-QRS-345-66</td>
               <td scope="row">Juego de Mesa Monopoly</td>
               <td scope="row">24.990</td>
               <td scope="row">Juegos</td>
@@ -295,10 +313,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">50</td>
+              <td scope="row">Sucursal Norte</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">17</td>
-              <td scope="row">COCIN-TUV-678-77</td>
+              <td scope="row" class="tdLink">COCIN-TUV-678-77</td>
               <td scope="row">Cafetera Espresso</td>
               <td scope="row">159.990</td>
               <td scope="row">Cocina</td>
@@ -306,10 +325,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">12</td>
+              <td scope="row">Sucursal Sur</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">18</td>
-              <td scope="row">BELLE-WXY-901-88</td>
+              <td scope="row" class="tdLink">BELLE-WXY-901-88</td>
               <td scope="row">Secador de Pelo Profesional</td>
               <td scope="row">59.990</td>
               <td scope="row">Belleza</td>
@@ -317,10 +337,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">20</td>
+              <td scope="row">Sucursal Este</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">19</td>
-              <td scope="row">MASCO-ZAB-234-99</td>
+              <td scope="row" class="tdLink">MASCO-ZAB-234-99</td>
               <td scope="row">Rascador para Gatos</td>
               <td scope="row">34.990</td>
               <td scope="row">Mascotas</td>
@@ -328,10 +349,11 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-check-lg"></i></td>
               <td scope="row">15</td>
+              <td scope="row">Sucursal Oeste</td>
             </tr>
-            <tr class="">
+            <tr>
               <td scope="row">20</td>
-              <td scope="row">ELEC-CDE-567-00</td>
+              <td scope="row" class="tdLink">ELEC-CDE-567-00</td>
               <td scope="row">Smartwatch</td>
               <td scope="row">149.990</td>
               <td scope="row">Electrónica</td>
@@ -339,11 +361,131 @@
               <td scope="row">Artículo</td>
               <td scope="row"><i class="bi bi-x-lg"></i></td>
               <td scope="row">10</td>
+              <td scope="row">Sucursal Centro</td>
             </tr>
-
-            
+            <tr>
+              <td scope="row">21</td>
+              <td scope="row" class="tdLink">DEPOR-NIK-RUN-42</td>
+              <td scope="row">Nike Air Zoom Pegasus</td>
+              <td scope="row">35.000</td>
+              <td scope="row">Deportivo</td>
+              <td scope="row">Nike</td>
+              <td scope="row">Producto</td>
+              <td scope="row"><i class="bi bi-check-lg"></i></td>
+              <td scope="row">15</td>
+              <td scope="row">Sucursal Norte</td>
+          </tr>
+          <tr>
+              <td scope="row">22</td>
+              <td scope="row" class="tdLink">DEPOR-ADI-BSK-43</td>
+              <td scope="row">Adidas Harden Vol.5</td>
+              <td scope="row">42.000</td>
+              <td scope="row">Deportivo</td>
+              <td scope="row">Adidas</td>
+              <td scope="row">Producto</td>
+              <td scope="row"><i class="bi bi-check-lg"></i></td>
+              <td scope="row">18</td>
+              <td scope="row">Sucursal Sur</td>
+          </tr>
+          <tr>
+              <td scope="row">23</td>
+              <td scope="row" class="tdLink">DEPOR-PUM-RUN-40</td>
+              <td scope="row">Puma Velocity Nitro</td>
+              <td scope="row">28.000</td>
+              <td scope="row">Deportivo</td>
+              <td scope="row">Puma</td>
+              <td scope="row">Producto</td>
+              <td scope="row"><i class="bi bi-check-lg"></i></td>
+              <td scope="row">30</td>
+              <td scope="row">Sucursal Este</td>
+          </tr>
+          <tr>
+              <td scope="row">24</td>
+              <td scope="row" class="tdLink">DEPOR-RBK-CRS-39</td>
+              <td scope="row">Reebok Nano X1</td>
+              <td scope="row">32.000</td>
+              <td scope="row">Deportivo</td>
+              <td scope="row">Reebok</td>
+              <td scope="row">Producto</td>
+              <td scope="row"><i class="bi bi-check-lg"></i></td>
+              <td scope="row">22</td>
+              <td scope="row">Sucursal Oeste</td>
+          </tr>
+          <tr>
+            <td scope="row">25</td>
+            <td scope="row" class="tdLink">DEPOR-NIK-BSK-44</td>
+            <td scope="row">Nike LeBron XIX</td>
+            <td scope="row">45.000</td>
+            <td scope="row">Deportivo</td>
+            <td scope="row">Nike</td>
+            <td scope="row">Producto</td>
+            <td scope="row"><i class="bi bi-check-lg"></i></td>
+            <td scope="row">12</td>
+            <td scope="row">Sucursal Centro</td>
+        </tr>
+        <tr>
+          <td scope="row">26</td>
+          <td scope="row" class="tdLink">DEPOR-ADI-FUT-42</td>
+          <td scope="row">Adidas Predator Edge</td>
+          <td scope="row">38.000</td>
+          <td scope="row">Deportivo</td>
+          <td scope="row">Adidas</td>
+          <td scope="row">Producto</td>
+          <td scope="row"><i class="bi bi-check-lg"></i></td>
+          <td scope="row">20</td>
+          <td scope="row">Sucursal Norte</td>
+      </tr>
+      <tr>
+          <td scope="row">27</td>
+          <td scope="row" class="tdLink">DEPOR-PUM-TRN-41</td>
+          <td scope="row">Puma Fuse Training</td>
+          <td scope="row">29.500</td>
+          <td scope="row">Deportivo</td>
+          <td scope="row">Puma</td>
+          <td scope="row">Producto</td>
+          <td scope="row"><i class="bi bi-check-lg"></i></td>
+          <td scope="row">25</td>
+          <td scope="row">Sucursal Sur</td>
+      </tr>
+      <tr>
+          <td scope="row">28</td>
+          <td scope="row" class="tdLink">DEPOR-UND-RUN-43</td>
+          <td scope="row">Under Armour HOVR</td>
+          <td scope="row">36.000</td>
+          <td scope="row">Deportivo</td>
+          <td scope="row">Under Armour</td>
+          <td scope="row">Producto</td>
+          <td scope="row"><i class="bi bi-check-lg"></i></td>
+          <td scope="row">16</td>
+          <td scope="row">Sucursal Este</td>
+      </tr>
+      <tr>
+          <td scope="row">29</td>
+          <td scope="row" class="tdLink">DEPOR-ASC-VOL-40</td>
+          <td scope="row">Asics Sky Elite FF</td>
+          <td scope="row">33.000</td>
+          <td scope="row">Deportivo</td>
+          <td scope="row">Asics</td>
+          <td scope="row">Producto</td>
+          <td scope="row"><i class="bi bi-check-lg"></i></td>
+          <td scope="row">19</td>
+          <td scope="row">Sucursal Oeste</td>
+      </tr>
+      <tr>
+          <td scope="row">30</td>
+          <td scope="row" class="tdLink">DEPOR-NIK-TRK-42</td>
+          <td scope="row">Nike ZoomX Dragonfly</td>
+          <td scope="row">41.000</td>
+          <td scope="row">Deportivo</td>
+          <td scope="row">Nike</td>
+          <td scope="row">Producto</td>
+          <td scope="row"><i class="bi bi-check-lg"></i></td>
+          <td scope="row">14</td>
+          <td scope="row">Sucursal Centro</td>
+      </tr>
           </tbody>
         </table>
+        <div id="pagination"></div>
       </div>
     </div>
   </main>

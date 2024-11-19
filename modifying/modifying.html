@@ -26,7 +26,6 @@
         <nav class="menu" id="menuNav">
             <ul class="menu-list">
                 <button class="exitMenu bi bi-x-lg" id="exitM"></button>
-                <li class="itemMenu"><a href="../filtering/filtering.html">Atras</a></li>
                 <li class="itemMenu login-text"><a href="#">Tomás</a></li>
             </ul>
         </nav>
@@ -36,6 +35,11 @@
     </header>
     <main>
         <h1 id="title">Nuevo</h1>
+
+        <div class="buttonContainer" id="containerButtonMenu">
+            <a class="button" href="../filtering/filtering.html">Atras</a>
+        </div>
+
         <div class="container">
             <form id="form-check-input" class="needs-validation" novalidate>
                 <div class="row">
@@ -72,8 +76,6 @@
                             <div class="container-input">
                                 <label for="category-text">Categoría</label>
                                 <div class="flex-group">
-                                    <!-- <input type="text" id="category-text">
-                                    <label for="category-option"></label> -->
                                     <select name="category-option" id="category-option">
                                         <option value="0">Indumentaria</option>
                                         <option value="1">Calzado</option>
@@ -85,8 +87,6 @@
                             <div class="container-input">
                                 <label for="brand">Marca</label>
                                 <div class="flex-group">
-                                    <!-- <input type="text" id="brand">
-                                    <label for="brand-option"></label> -->
                                     <select name="brand" id="brand-option">
                                         <option value="0">Adidas</option>
                                         <option value="1">Balenciaga</option>
@@ -105,52 +105,21 @@
                             </div>
 
                             <div class="container-input">
+                                <label for="branch">Sucursal</label>
+                                <select name="branch" id="branch">
+                                    <option value="0">Moda Urbana Style</option>
+                                    <option value="1">Sucursal Centro</option>
+                                    <option value="1">Sucursal Norte</option>
+                                </select>
+                            </div>
+             
+                            <div class="container-input">
                                 <label for="in-use" id="label-radio">En uso</label>
                                 <input class="form-check-input input-only" type="checkbox" id="in-use">
                             </div>
                         </div>
                     </div>
 
-                    <div class="card mb-4 col-6">
-
-                        <div class="card-header">
-                            <h5>Stock y Ubicación</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="container-input">
-                                <label for="branch">Sucursal</label>
-                                <select name="branch" id="branch">
-                                    <option value="0">Moda Urbana Style</option>
-                                    <option value="1">Sucursal Centro</option>
-                                    <option value="1">Sucursal Norte</option>
-
-                                </select>
-                            </div>
-
-                            <div class="container-input">
-                                <label for="stock">Stock</label>
-                                <input type="number" id="stock" required>
-                                <div class="invalid-feedback">
-                                    Ingrese un Stock valido.
-                                </div>
-                            </div>
-
-                            <div class="container-input">
-                                <label class="form-label">Estado</label>
-                                <select class="form-select">
-                                    <option value="en-stock">En Stock</option>
-                                    <option value="agotado">Agotado</option>
-                                    <option value="bajo-stock">Bajo Stock</option>
-                                </select>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
                     <div class="card mb-4 col-6">
                         <div class="card-header">
                             <h5>Dimensiones del Producto</h5>
@@ -197,7 +166,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div class="row">
                     <div class="card mb-4 col-6">
                         <div class="card-header">
                             <h5 class="mb-0">Dimensiones del Embalaje</h5>
@@ -228,6 +199,24 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="container3 col-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">Información Adicional</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">Descripción del Producto</label>
+                                        <textarea class="form-control" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <div class="container1">
@@ -239,38 +228,31 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Talla EU</th>
-                                        <th>
-                                            Negro
-                                        </th>
-                                        <th>
-                                            Blanco
-                                        </th>
-                                        <th>
-                                            Verde
-                                        </th>
+                                        <th>Talla</th>
+                                        <th>42</th>
+                                        <th>43</th>
+                                        <th>44</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>42</td>
+                                        <td>Negro</td>
                                         <td><input type="number" class="form-control" value="10"></td>
                                         <td><input type="number" class="form-control" value="10"></td>
-                                        <td><input type="number" class="form-control" value="10"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>43</td>
-                                        <td><input type="number" class="form-control" value="10"></td>
-                                        <td><input type="number" class="form-control" value="10"></td>
-                                        <td><input type="number" class="form-control" value="10"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>44</td>
                                         <td><input type="number" class="form-control" value="12"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blanco</td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                        <td><input type="number" class="form-control" value="10"></td>
                                         <td><input type="number" class="form-control" value="11"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Verde</td>
+                                        <td><input type="number" class="form-control" value="10"></td>
+                                        <td><input type="number" class="form-control" value="10"></td>
                                         <td><input type="number" class="form-control" value="12"></td>
                                     </tr>
-                        
                                 </tbody>
                             </table>
                         </div>
@@ -284,55 +266,90 @@
                             <h5 class="mb-0">Imágenes del Producto</h5>
                         </div>
                         <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Imagen Principal</label>
-                                    <input type="file" class="form-control" accept="image/*" required>
-                                    <div class="invalid-feedback">
-                                        Agregue una imagen principal.
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Imágenes Adicionales</label>
-                                    <input type="file" class="form-control" accept="image/*" multiple>
-                                </div>
-                            </div>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><label for="colorImg">Color de Imagen</label></td>
+                                        <td>
+                                            Negro
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Imagen Principal</label></td>
+                                        <td>
+                                            <input type="file" class="form-control" accept="image/*" required>
+                                            <div class="invalid-feedback">
+                                                Agregue una imagen principal.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Imágenes Adicionales</label></td>
+                                        <td>
+                                            <input type="file" class="form-control" accept="image/*" multiple>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><label for="colorImg">Color de Imagen</label></td>
+                                        <td>
+                                            Blanco
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Imagen Principal</label></td>
+                                        <td>
+                                            <input type="file" class="form-control" accept="image/*" required>
+                                            <div class="invalid-feedback">
+                                                Agregue una imagen principal.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Imágenes Adicionales</label></td>
+                                        <td>
+                                            <input type="file" class="form-control" accept="image/*" multiple>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><label for="colorImg">Color de Imagen</label></td>
+                                        <td>
+                                            verde
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Imagen Principal</label></td>
+                                        <td>
+                                            <input type="file" class="form-control" accept="image/*" required>
+                                            <div class="invalid-feedback">
+                                                Agregue una imagen principal.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Imágenes Adicionales</label></td>
+                                        <td>
+                                            <input type="file" class="form-control" accept="image/*" multiple>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-
-
                 </div>
-
-                <div class="container3">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5 class="mb-0">Información Adicional</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-12">
-                                    <label class="form-label">Descripción del Producto</label>
-                                    <textarea class="form-control" rows="4"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="containerButtons">
                     <a class="button" id="cancel" href="../filtering/filtering.html">Cancelar</a>
                     <button id="submit" type="submit">Crear</button>
-
-
                 </div>
-
-                <!-- <div class="container-input">
-                    <label for="id">ID</label>
-                    <input  type="number" id="id">
-                    
-                </div> -->
-
-
             </form>
         </div>
 

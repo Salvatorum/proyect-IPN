@@ -1,7 +1,8 @@
 :root {
     --color-title:rgb(61, 78, 110);
-    --color-backgound-buttom: #45709B;
-    --color-buttom:#fff;
+    --color-backgound-button: #45709B;
+    --color-letter-button:#fff;
+
     --color-border-input: rgb(199, 199, 199);
     --color-shadow-box:rgb(207, 207, 207);
     --color-button-cancel:rgb(186, 86, 85);
@@ -165,22 +166,21 @@ input[type="text"], input[type="number"], select {
     
 }
 
-/* .input-only {
-    width: 500px;
-} */
-
-
 #label-radio {
     display: inline;
+}
+
+textarea {
+    height: 300px;
 }
 
 #submit, #cancel {
     margin: 0.5rem 0 0.5rem 0;
     padding: 0.4rem;
-    background-color: var(--color-backgound-buttom);
+    background-color: var(--color-backgound-button);
     border: none;
     border-radius: 10%;
-    color: var(--color-buttom);
+    color: var(--color-letter-button);
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -200,9 +200,38 @@ input[type="text"], input[type="number"], select {
     transform: scale(1.1);
 }
 
+.buttonContainer {
+    width: 120px;
+    height: 100px;
+    box-shadow: 5px 5px 30px var(--color-shadow-box); 
+    border-radius: 5px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#containerButtonMenu {
+    min-width: 150px;
+    height: 50px;
+    margin: 0.5rem 0 0 2rem;
+    gap: 1rem;
+}
 
+.button{
+    padding: 0.4rem;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--color-letter-button);
+    background-color: var(--color-backgound-button);
+    transition: transform 0.5s ease;
+}
 
+.button:hover  {
+    transform: scale(1.1);
+}
 
 footer {
     padding: 1rem 0 1rem 1rem;
@@ -278,4 +307,10 @@ footer {
     .itemMenu a{
         color: rgb(255, 255, 255);
     }
+}
+
+/* estilos responsivos del main*/
+
+@media screen and (max-width: 550px) { 
+
 }
