@@ -35,13 +35,13 @@ $(document).ready(function () {
 
   function toggleProductInputs() {
     const value = $("#type-product").val();
+    const priceOff = $('.priceoff')
 
     if (value === "0") {
       $(".productOff").removeClass("off");
     } else {
       $(".productOff").addClass("off");
     }
-
   }
 
  toggleProductInputs();
