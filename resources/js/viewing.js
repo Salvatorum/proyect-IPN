@@ -17,8 +17,8 @@ $(document).ready(function() {
     });
   });
 
+  
 /* seleccion de botones de colores*/  
-
 $(document).ready(function() {
 
 $('button').click(function(){

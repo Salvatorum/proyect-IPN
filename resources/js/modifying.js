@@ -1,24 +1,21 @@
 /* funcionalidad del botón hamburguesa */
-$(document).ready(function() {
-    $("#openM").click(function() {
-      $("#menuNav").addClass("visible");
-    });
-  
-    $("#exitM").click(function() {
-      $("#menuNav").removeClass("visible");
-    });
+$(document).ready(function () {
+  $("#openM").click(function () {
+    $("#menuNav").addClass("visible");
   });
 
+  $("#exitM").click(function () {
+    $("#menuNav").removeClass("visible");
+  });
+});
 
 /* Código de validación del Form de Bootstrap 5 */
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+
 (function () {
   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
@@ -32,6 +29,27 @@ $(document).ready(function() {
     })
 })()
 
+/* Muestra o quita inputs de product */
+
+$(document).ready(function () {
+
+  function toggleProductInputs() {
+    const value = $("#type-product").val();
+
+    if (value === "0") {
+      $(".productOff").removeClass("off");
+    } else {
+      $(".productOff").addClass("off");
+    }
+
+  }
+
+ toggleProductInputs();
+
+ $("#type-product").change(toggleProductInputs);
+});
 
 
- 
+
+
+
