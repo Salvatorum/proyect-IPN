@@ -124,11 +124,9 @@ form {
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    /* align-items:center; */
     flex-wrap: wrap;
     padding: 1rem 0 1rem 1rem;
     margin:  2rem auto 2rem auto;
-    /* box-shadow: 5px 5px 30px var(--color-shadow-box);  */
     border-radius: 5px;
     width: auto;;
 }
@@ -311,10 +309,4 @@ footer {
     .itemMenu a{
         color: rgb(255, 255, 255);
     }
-}
-
-/* estilos responsivos del main*/
-
-@media screen and (max-width: 550px) { 
-
 }
