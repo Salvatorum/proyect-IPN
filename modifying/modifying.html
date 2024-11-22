@@ -192,61 +192,37 @@
                         </div>
                     </div>
 
-                    <div class="container3 col-6">
+                    <div class="container1 col-6">
                         <div class="card mb-4">
                             <div class="card-header">
-                                <h5 class="mb-0">Información Adicional</h5>
+                                <h5 class="mb-0">Precio por Sucursal</h5>
                             </div>
                             <div class="card-body">
-                                <div class="row g-3">
-                                    <div class="col-md-12">
-                                        <label class="form-label">Descripción del Producto</label>
-                                        <textarea class="form-control" rows="4"></textarea>
-                                    </div>
-                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Sucursal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Moda Urbana Style</td>
+                                            <td><input type="number" class="form-control" value="0" min="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>SportMax Elite</td>
+                                            <td><input type="number" class="form-control" value="0" min="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Champions Zone</td>
+                                            <td><input type="number" class="form-control" value="0" min="0"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="container1">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5 class="mb-0">Precio por Sucursal</h5>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Sucursal</th>
-                                        <th>Talla 42</th>
-                                        <th>Talla 43</th>
-                                        <th>Talla 44</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Moda Urbana Style</td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SportMax Elite</td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Champions Zone</td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                        <td><input type="number" class="form-control" value="0" min="0"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="container1 productOff">
@@ -305,18 +281,12 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><label>Imagen Principal</label></td>
+                                        <td><label>Imagenes</label></td>
                                         <td>
-                                            <input type="file" class="form-control" accept="image/*" required>
+                                            <input type="text" class="form-control" accept="image/*" required placeholder="URL">
                                             <div class="invalid-feedback">
                                                 Agregue una imagen principal.
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Imágenes Adicionales</label></td>
-                                        <td>
-                                            <input type="file" class="form-control" accept="image/*" multiple>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -331,18 +301,12 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><label>Imagen Principal</label></td>
+                                        <td><label>Imagenes</label></td>
                                         <td>
-                                            <input type="file" class="form-control" accept="image/*" required>
+                                            <input type="text" class="form-control" accept="image/*" required placeholder="URL">
                                             <div class="invalid-feedback">
                                                 Agregue una imagen principal.
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Imágenes Adicionales</label></td>
-                                        <td>
-                                            <input type="file" class="form-control" accept="image/*" multiple>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -357,18 +321,12 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><label>Imagen Principal</label></td>
+                                        <td><label>Imagenes</label></td>
                                         <td>
-                                            <input type="file" class="form-control" accept="image/*" required>
+                                            <input type="text" class="form-control" accept="image/*" required placeholder="URL">
                                             <div class="invalid-feedback">
                                                 Agregue una imagen principal.
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Imágenes Adicionales</label></td>
-                                        <td>
-                                            <input type="file" class="form-control" accept="image/*" multiple>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -376,6 +334,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="container3 col-12">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">Información Adicional</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">Descripción del Producto</label>
+                                        <textarea class="form-control" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="containerButtons">
                     <a class="button" id="cancel" href="../filtering/filtering.html">Cancelar</a>
                     <button id="submit" type="submit">Crear</button>

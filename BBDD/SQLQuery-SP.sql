@@ -102,14 +102,32 @@ CREATE PROCEDURE SP_item_complete_add
     @price INT
 AS
 BEGIN
-    DECLARE @itemId INT;
+    BEGIN TRY
+        BEGIN TRANSACTION
 
-    EXEC SP_item_add @name, @sku, @desc, @itemId OUTPUT; 
+			DECLARE @itemId INT;
 
-    EXEC SP_item_image_add @url, @colorId, @itemId;  
+			EXEC SP_item_add @name, @sku, @desc, @itemId OUTPUT; 
 
-    EXEC SP_item_price_list @itemId, @price_list_id, @price;
+			EXEC SP_item_image_add @url, @colorId, @itemId;  
+
+			EXEC SP_item_price_list @itemId, @price_list_id, @price;
+
+		COMMIT TRANSACTION
+
+		SELECT @itemId AS idItemInsertado, 'Producto/Artículo insertado correctamente' AS Mensaje;
 
 
-    SELECT @itemId AS idItemInsertado, 'Producto/Artículo insertado correctamente' AS Mensaje;
+	END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION
+
+        DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE()
+        DECLARE @ErrorSeverity INT = ERROR_SEVERITY()
+        DECLARE @ErrorState INT = ERROR_STATE()
+
+        RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState)
+    END CATCH
 END;
+GO
